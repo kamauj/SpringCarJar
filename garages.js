@@ -16,7 +16,7 @@ BONUS
 */
 
 const updateGarage = () => { 
-  axios.put(`/update/${DOM.inputID.value.toString()}`, {name:DOM.inputUpdateName.value,_id:DOM.inputUpdateID.value.toString()})
+  axios.put(`/update/${DOM.inputGarageID.value.toString()}`, {name:DOM.inputUpdateGarageName.value,_id:DOM.inputUpdateGarageID.value.toString()})
     .then((response) => {
      console.log(response);
      get();
