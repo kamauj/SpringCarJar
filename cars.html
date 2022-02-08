@@ -12,7 +12,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -32,20 +32,21 @@
           </form>
         </div>
       </nav>
+    
+      <input type="text" id="CarId" placeholder="Enter car id" />
+ <input type="text" id="NameCreate" placeholder="Enter car name" />
+ <input type="text" id="ModelCreate" placeholder="Enter car model" />
+ <input type="text" id="MakeCreate" placeholder="Enter car make " />
+ <input type="text" id="ColourCreate" placeholder="Enter car colour" />
+ <input type="text" id="DoorsCreate" placeholder="Enter number of doors" />
+ <input type="text" id="GarageCreate" placeholder="Enter car garage" />
+ <button type="button" id="CarCreate">Create Car</button><br/><br/>
+ <br>
+ <input type="text" id="SearchID" placeholder="Enter car id"/>
+ <button type="button" id="carSearch">Search</button>
 
-    <button type="button" id="ReadCar">Read All Cars</button><br/><br/>
+ <input type="text" id="UpdateCarId" placeholder="Enter car id" />
 
-    <input type="text" id="ReadCarIdInput" placeholder="Enter car ID" />
-    <button type="button" id="ReadCarId">Read Car ID</button><br/><br/>
-
-    <input type="text" id="name" placeholder="enter car name" />
-    <input type="text" id="colour" placeholder="enter colour" />
-    <input type="text" id="make" placeholder="enter make" />
-    <input type="text" id="model" placeholder="enter model" />
-    <input type="text" id="doors" placeholder="enter door number" />
-    <button type="button" id="createCarButton">Create Car</button><br/><br/>
-
-      <input type="text" id="UpdateCarId" placeholder="Enter car id" />
       <input type="text" id="NameUpdate" placeholder="Enter car name" />
       <input type="text" id="ModelUpdate" placeholder="Enter car model" />
       <input type="text" id="MakeUpdate" placeholder="Enter car make " />
@@ -57,9 +58,9 @@
       <input type="text" id="DeleteCarId" placeholder="Enter car id" />
       <button type="button" id="CarDelete">Delete Car</button><br/><br/>
 
-      <div id="CarOutput"></div><br/>
+ <div id="CarOutput"></div><br/>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./cars.js"></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script type = 'module' src='./cars.js'></script>
 </body>
 </html>
