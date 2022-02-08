@@ -47,4 +47,3 @@ export const updateModel = document.getElementById(`updateModel`);
 export const updateDoors = document.getElementById(`updateDoors`);
 export const updateCarID = document.getElementById(`updateCarID`);
 export const updateCarButton = document.getElementById(`updateCarButton`);
-
