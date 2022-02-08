@@ -1,7 +1,9 @@
+export const inputGarageID = document.getElementById(`inputGarageID`);
 // export const carRead = document.getElementById(`carRead`)
 // export const carOutput = document.getElementById(`carOutput`)
 // export const inputNew = document.getElementById(`inputNew`)
 // export const inputName = document.getElementById(`inputName`)
+
 export const inputUpdateGarageName = document.getElementById(`inputUpdateGarageName`);
 export const inputUpdateGarageID = document.getElementById(`inputUpdateGarageID`);
 export const buttonUpdateGarage = document.getElementById(`buttonUpdateGarage`);
