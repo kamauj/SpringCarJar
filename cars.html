@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" href="#">
+      <img src="./img/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+      NotSo Trader
+    </a>   
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./homepage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./garages.html">Garages</a>
+            </li>
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="./cars.html">Cars</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+
+  </nav>
+<!--TRYING TO ADD A DROPDOWN BUTTON-->
+  <div class="jumbotron " >
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i>Select Garage</i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">London</a></li>
+        <li><a class="dropdown-item" href="#">Manchester</a></li>
+        <li><a class="dropdown-item" href="#">Edinburgh</a></li>
+      </ul>
+    </div>
+    <button type="button" id="readCarButton">read cars</button><br/><br/>
+
+    <input type="text" id="getCarID" placeholder="enter car ID to read" />
+    <button type="button" id="specificCarButton">Read Car ID</button><br/><br/>
+
+    <input type="text" id="getCarByName" placeholder="enter car name to read" />
+    <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/>
+
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Create </h5>
+            <input type="text" id="name" placeholder="enter car name" />
+            <input type="text" id="colour" placeholder="enter colour" />
+            <input type="text" id="make" placeholder="enter make" />
+            <input type="text" id="model" placeholder="enter model" />
+            <input type="text" id="doors" placeholder="enter door number" />
+            <input type="text" id="garageID" placeholder="enter garage ID" />
+            <button type="button" id="createCarButton">Create Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Update </h5>
+            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+            <input type="text" id="updateColour" placeholder="enter updated colour" />
+            <input type="text" id="updateMake" placeholder="enter updated make" />
+            <input type="text" id="updateModel" placeholder="enter updated model" />
+            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Delete By ID </h5>
+            <input type="text" id="deleteCarID" placeholder="enter Car ID to delete" />
+            <button type="button" id="deleteCarButton">Delete Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Delete </h5>
+            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+            <input type="text" id="updateColour" placeholder="enter updated colour" />
+            <input type="text" id="updateMake" placeholder="enter updated make" />
+            <input type="text" id="updateModel" placeholder="enter updated model" />
+            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+          </div>
+        </div>
+      </div>
+     
+      
+    </div>
+    <div class="card text-center">
+      <div class="card-header">
+        Cars Available
+      </div>
+      <div class="card-body">
+         <ul id="garageOutput"></ul><br/>
+         <ul id="carOutput"></ul><br/>
+      </div>
+    </div>
+
+  </div>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./cars.js"></script>
+
+
+</body>
+</html>
