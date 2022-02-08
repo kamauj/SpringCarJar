@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         
         <a class="navbar-brand" href="./homepage.html">Notso Trader</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,48 +32,32 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
-    </nav>
+  </nav>
 
-<!--TRYING TO ADD A DROPDOWN BUTTON-->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <i>Select Garage</i>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">London</a></li>
-          <li><a class="dropdown-item" href="#">Manchester</a></li>
-          <li><a class="dropdown-item" href="#">Edinburgh</a></li>
-        </ul>
-      </div>
-      
-      <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownGarages" data-bs-toggle="dropdown" aria-expanded="false">
-          <i>Select Garage</i>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownGarages">
-          <li><a class="dropdown-item" href="#">London</a></li>
-          <li><a class="dropdown-item" href="#">Manchester</a></li>
-          <li><a class="dropdown-item" href="#">Edinburgh</a></li>
-        </ul>
-      </div> -->
+  <div>
+    <button type="button" id="readGarageButton">Read Garage</button><br/><br/>
+
+    <input type="text" id="getGarageID" placeholder="enter garage ID to read" />
+    <button type="button" id="specificGarageButton">Read Garage ID</button><br/><br/>
+
+    <input type="text" id="garageName" placeholder="enter garage name" />
+    <button type="button" id="createGarageButton">Create Garage</button><br/><br/>
+
+    <input type="text" id="delGarageID" placeholder="enter garage ID to delete" />
+    <button type="button" id="deleteGarageButton">Delete Garage</button><br/><br/>
+
+    <input type="text" id="updateGarageID" placeholder="enter garage ID to update" />
+    <input type="text" id="updateName" placeholder="enter updates name" />
+    <button type="button" id="updateGarageButton">Update Garage</button><br/><br/>
+
+    <ul id="garageOutput"></ul><br/>
+
+    </div>
 
 
 
-
-<input type="text" id="NameCreate" placeholder="Enter car name" />
-<input type="text" id="ModelCreate" placeholder="Enter car model" />
-<input type="text" id="MakeCreate" placeholder="Enter car make " />
-<input type="text" id="ColourCreate" placeholder="Enter car colour" />
-<input type="text" id="DoorsCreate" placeholder="Enter number of doors" />
-
-<button type="button" id="CarCreate"> Create Car </button><br/><br/>
-<br>
-<input type="text" id="SearchID" placeholder="Enter car id"/>
-<button type="button" id="carSearch">Search</button>
-<ul id="carOutput"></ul>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script type="module" src="./garages.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./garages.js"></script>
 
 </body>
 
