@@ -58,15 +58,19 @@
       </div> -->
 
 
-<!-- INSERTING UPDATE AND DELETE FUNCTIONS-->
-<h2>Update</h2>
-<input type="number" id="inputUpdateGarageID" placeholder="Enter Garage ID" />
-<input type="text" id="inputUpdateGarageName" placeholder="Enter Garage Name" />
-<button type="button" id="buttonUpdateGargae">Update Garage</button>
-<hr/>
-<h2>Delete</h2>
-<input type="number" id="inputDeleteID" placeholder="Enter Garage ID" />
-<button type="button" id="buttonDelete">Delete Garage</button>
+
+
+<input type="text" id="NameCreate" placeholder="Enter car name" />
+<input type="text" id="ModelCreate" placeholder="Enter car model" />
+<input type="text" id="MakeCreate" placeholder="Enter car make " />
+<input type="text" id="ColourCreate" placeholder="Enter car colour" />
+<input type="text" id="DoorsCreate" placeholder="Enter number of doors" />
+
+<button type="button" id="CarCreate"> Create Car </button><br/><br/>
+<br>
+<input type="text" id="SearchID" placeholder="Enter car id"/>
+<button type="button" id="carSearch">Search</button>
+<ul id="carOutput"></ul>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./garages.js"></script>
