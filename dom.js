@@ -34,7 +34,7 @@ export const make = document.getElementById(`make`);
 export const model = document.getElementById(`model`);
 export const doors = document.getElementById(`doors`);
 export const garageID = document.getElementById(`garageID`);
-export const createCarButton = document.getElementById(`createCarButton`);
+export const CarCreate = document.getElementById(`createCarButton`);
 export const carOutput = document.getElementById(`carOutput`);
 //Delete Car (DELETE)
 export const deleteCarID = document.getElementById(`deleteCarID`);
