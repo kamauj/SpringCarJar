@@ -79,4 +79,3 @@ const readIDGarage = () => {
       console.log(err);
     });
 }
-
