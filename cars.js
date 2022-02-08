@@ -108,4 +108,3 @@ const carFindByName = () => {
     }).catch((err) => {
       console.log(err);
     });
-}
