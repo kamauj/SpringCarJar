@@ -19,4 +19,19 @@ export const CarCreate = document.getElementById(`CarCreate`);
 export const CarID = document.getElementById(`CarID`);
 export const CarSearch = document.getElementById('CarSearch');
 export const SearchID = document.getElementById(`SearchID`);
+export const CarOutput = document.getElementById(`CarOutput`)
 
+//Update (PUT) car
+export const UpdateCar = document.getElementById(`CarUpdate`);
+export const UpdateCarId = document.getElementById(`UpdateCarID`);
+
+export const CarNameUpdate = document.getElementById(`NameUpdate`);
+export const CarModelUpdate = document.getElementById(`ModelUpdate`);
+export const CarColourUpdate = document.getElementById(`ColourUpdate`);
+export const CarMakeUpdate = document.getElementById(`MakeUpdate`);
+export const CarDoorUpdate = document.getElementById(`DoorsUpdate`);
+export const CarGarageUpdate = document.getElementById(`GarageUpdate`);
+
+//Delete (DELETE) car
+export const DeleteCar = document.getElementById(`CarDelete`);
+export const DeleteCarId = document.getElementById(`DeleteCarID`);
