@@ -10,52 +10,6 @@ const writeItem = item => {
 }
 
 
-// const get = () => {
-//     DOM.carOutput.innerHTML = ``;
-  
-//     axios.get(`http://localhost:8080/car/read`)
-//       .then((response) => {
-//         if (!Array.isArray(response.data)) {
-//           writeCar(response.data);
-//         } else {
-//           for (let item of response.data) {
-//             writeCar(item);
-//           }
-//         }
-//       }).catch((err) => {
-//         console.log(err);
-//       });
-//   }
-
-  // const post = () => {
-  //   axios.post(`http://localhost:8080/car/create`, {name : DOM.CarID})
-  //     .then((response) => {
-  //       console.log(response);
-  //       get();
-  //     }).catch((err) => {
-  //       console.log(err);
-  //     });
-
-  //   }
-  
-  //   const carCreate = () => {
-  //     axios.post(`http://localhost:8080/car/create`, {
-  //         name : "Audi",
-  //         colour : "White",
-  //         make : "n/a",
-  //         model : "A6",
-  //         doors : 5
-  //     }).then((response) => {
-  //         console.log(response);
-  //         getGarage();
-  //     }).catch((err) => {console.log(err);})}
-  
-  
-  
-
-
-
-
   const createcar = () => {
     axios.post(`http://localhost:8080/car/create`,
         {
@@ -119,50 +73,4 @@ const DeleteCar = () => {
         });
 }
 DOM.DeleteCar.onclick = () => DeleteCar();
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-      //Read (GET)
-      
-          // const ReadCar = () => {
-          // DOM.CarOutput.innerHTML = ``;
-          //   axios.get(`http://localhost:8080/car/read`)
-          //   .then((response) => {
-          //   if (!Array.isArray(response.data)) {
-          //   writeItem(response.data);
-          //   } else {
-          //   for (let item of response.data) {
-          //   writeItem(item); 
-          //   }
-          //    }
-          //   }).catch((err) => {
-          //   console.log(err);
-          //   });
-          //    }
-          //    DOM.CarSearch.onclick = () => ReadCar()
     
-
-
-
-   
-//     
-    // const createcar = () => {
-    //     axios.post(`http://localhost:8080/car/create`, `${DOM.CarID}`)
-    //     .then ((response)=> {
-    //         console.log (response);
-    //         get();
-    //     }).catch((err)=>{
-    //         console.log(err);
