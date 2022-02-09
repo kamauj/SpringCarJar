@@ -19,6 +19,34 @@ $(function() {
 		$(this).addClass('active');
 		e.preventDefault();
 	});
+	
+	$('#create-form-link').click(function(e) {
+		$("#create-form").delay(100).fadeIn(100);
+ 		$("#update-form").fadeOut(100);
+		$("#delete-form").fadeOut(100);
+		$('#update-form-link').removeClass('active');
+		$('#delete-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#update-form-link').click(function(e) {
+		$("#update-form").delay(100).fadeIn(100);
+ 		$("#create-form").fadeOut(100);
+		$("#delete-form").fadeOut(100);
+		$('#create-form-link').removeClass('active');
+		$('#delete-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#delete-form-link').click(function(e) {
+		$("#delete-form").delay(100).fadeIn(100);
+ 		$("#update-form").fadeOut(100);
+		$("#create-form").fadeOut(100);
+		$('#update-form-link').removeClass('active');
+		$('#create-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
 
 });
 
