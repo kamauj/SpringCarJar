@@ -8,6 +8,13 @@ const writeItem = item => {
   child.innerHTML = `${JSON.stringify(item)}`;
   DOM.carOutput.appendChild(child);
 }
+const garagelist = item => {
+  const child = document.createElement(`li`);
+  child.id = item._id;
+  child.innerHTML = `${JSON.stringify(item)}`;
+  DOM.carGarageName.appendChild(child);
+}
+
 
 //CAR READ
 const carRead = () => {
@@ -26,30 +33,57 @@ const carRead = () => {
       console.log(err);
     });
 } 
-let passById;
 
-const nameToGarage = (str) => {
+//Read ALL Garages
+const listGarage = () => {
+  
   axios.get(`http://localhost:8080/garage/read`)
-  .then((response) => {
-    for (const i of response.data) {      
-       if(i.name === str) {
-          passById = i.id;
-       }
-    }
-    console.log(passById);
-}).catch((err) => {
-    console.log(err);
-  });
-return passById;}
+     
+    .then((response) => {
+      let activeGarage = [];
+      if (!Array.isArray(response.data)) {
+        console.log(response.data.name);//garagelist(response.data.name);
+      } else {
+        for (let item of response.data) {
+          garagelist(item.name);
+          activeGarage = [item.id, item.name];
+          
+           console.log(item.name);
+           console.log(activeGarage);
+        }
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
+   
+    
+}
+listGarage(); 
+
+
+const selectGarage = (name) => {
+  
+  axios.get(`http://localhost:8080/garage/read`)
+
+    .then((response) => {
+      
+      
+    }).catch((err) => {
+      console.log(err);
+    });
+}
+selectGarage();
+
+
 
 const createcar = () => {
   axios.post(`http://localhost:8080/car/create`, {
-    "name" : `${DOM.name.value}`,
-    "colour" :`${DOM.colour.value}`,
-    "make" : `${DOM.make.value}`,
-    "model" : `${DOM.model.value}`,
-    "doors" : `${DOM.doors.value}`,
-    "garage": {"id" : nameToGarage(`${DOM.createGarageButton.value}`).toString()}
+    name : DOM.name.value,
+    colour :DOM.colour.value,
+    make : DOM.make.value,
+    model : DOM.model.value,
+    doors : DOM.doors.value,
+    garage: {id : 1}
   })
     .then((response) => {
       console.log(response);
@@ -58,12 +92,6 @@ const createcar = () => {
       console.log(err);
   })};
 
-  DOM.CarCreate.onclick = () => {createcar();}
-      
-      
-      
-DOM.CarCreate.onclick = () => {DOM.colour.value,DOM.doors.value,DOM.make.value, DOM.model.value, DOM.name.value,DOM.carGarageName.value;
-      createcar();}
 
 const carDelete = () => {
   axios.delete(`http://localhost:8080/car/delete/${DOM.deleteCarID.value}`)
@@ -129,4 +157,6 @@ DOM.allCarButton.onclick = () => carRead();
 DOM.deleteCarButton.onclick = () => carDelete();
 DOM.updateCarButton.onclick = () => carUpdate();
 DOM.idCarButton.onclick = () => carReadID();
+DOM.CarCreate.onclick = () => createcar();
+
 // DOM.getCarByNameButton.onclick = () => carFindByName();
