@@ -1,3 +1,20 @@
+//Login
+export const loginUser = document.getElementById("loginUserName");
+export const loginPass = document.getElementById("loginPwd");
+export const remCheckbox = document.getElementById("remCheckbox");
+export const loginButton = document.getElementById("login-submit");
+export const forgotButton = document.getElementById("loginForgot");
+export const regUsername = document.getElementById("regUsername");
+export const regEmail = document.getElementById("regEmail");
+export const regPass = document.getElementById("regPwd");
+export const regConfirmPass = document.getElementById("regConfirmPwd");
+export const regButton = document.getElementById("register-submit");
+//Forms
+export const loginForm = document.getElementById("login-form");
+export const regForm = document.getElementById("register-form");
+export const loginErrorMsg = document.getElementById("login-error-msg");
+
+
 
 //GARAGE
 //Read Garage(READ)
