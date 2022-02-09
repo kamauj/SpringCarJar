@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -48,58 +49,103 @@
     <button type="button" id="getCarByNameButton">Read Car ID</button><br/><br/> -->
 
     
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"> Create </h5>
-            <input type="text" id="name" placeholder="enter car name" />
-            <input type="text" id="colour" placeholder="enter colour" />
-            <input type="text" id="make" placeholder="enter make" />
-            <input type="text" id="model" placeholder="enter model" />
-            <input type="text" id="doors" placeholder="enter door number" />
-            <input type="text" id="carGarageName" placeholder="Enter Garage Name" />
-            <button type="button" id="createCarButton">Create Car</button><br/><br/>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"> Update </h5>
-            <input type="text" id="updateCarName" placeholder="enter updated car name" />
-            <input type="text" id="updateColour" placeholder="enter updated colour" />
-            <input type="text" id="updateMake" placeholder="enter updated make" />
-            <input type="text" id="updateModel" placeholder="enter updated model" />
-            <input type="text" id="updateDoors" placeholder="enter updated door number" />
-            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
-            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"> Delete By ID </h5>
-            <input type="text" id="deleteCarID" placeholder="enter Car ID to delete" />
-            <button type="button" id="deleteCarButton">Delete Car</button><br/><br/>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"> Delete </h5>
-            <input type="text" id="updateCarName" placeholder="enter updated car name" />
-            <input type="text" id="updateColour" placeholder="enter updated colour" />
-            <input type="text" id="updateMake" placeholder="enter updated make" />
-            <input type="text" id="updateModel" placeholder="enter updated model" />
-            <input type="text" id="updateDoors" placeholder="enter updated door number" />
-            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
-            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+								<a class="nav-link active" href="#" style="text-align:center" class="active" id="create-form-link">Create</a>
+                  </li>
+                </ul>
+							</div>
+							<div class="col-xs-6">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+								<a class="nav-link" href="#" style="text-align:center" id="update-form-link">Update</a>
+                  </li>
+                </ul>
+							</div>
+              <div class="col-xs-6">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+								    <a class="nav-link" href="#" style="text-align:center" id="delete-form-link">Delete</a>
+                  </li>
+                </ul>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="create-form" action="#" method="post" role="form" style="display: block;">
+									<div class="col-sm-6">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <h5 class="card-title"> Create </h5>
+                                            <input type="text" id="name" placeholder="enter car name" />
+                                            <input type="text" id="colour" placeholder="enter colour" />
+                                            <input type="text" id="make" placeholder="enter make" />
+                                            <input type="text" id="model" placeholder="enter model" />
+                                            <input type="text" id="doors" placeholder="enter door number" />
+                                            <input type="text" id="carGarageName" placeholder="Enter Garage Name" />
+                                            <button type="button" id="createCarButton">Create Car</button><br/><br/>
+                                          </div>
+                                        </div>
+                                      </div>
+								</form>
+								<form id="update-form" action="#" method="post" role="form" style="display: none;">
+									<div class="col-sm-6">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <h5 class="card-title"> Update </h5>
+                                            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+                                            <input type="text" id="updateColour" placeholder="enter updated colour" />
+                                            <input type="text" id="updateMake" placeholder="enter updated make" />
+                                            <input type="text" id="updateModel" placeholder="enter updated model" />
+                                            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+                                            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+                                            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+                                          </div>
+                                        </div>
+                                      </div>
+								</form>
+                                <form id="delete-form" action="#" method="post" role="form" style="display: none;">
+									<div class="col-sm-6">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <h5 class="card-title"> Delete By ID </h5>
+                                            <input type="text" id="deleteCarID" placeholder="enter Car ID to delete" />
+                                            <button type="button" id="deleteCarButton">Delete Car</button><br/><br/>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-6">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <h5 class="card-title"> Delete </h5>
+                                            <input type="text" id="updateCarName" placeholder="enter updated car name" />
+                                            <input type="text" id="updateColour" placeholder="enter updated colour" />
+                                            <input type="text" id="updateMake" placeholder="enter updated make" />
+                                            <input type="text" id="updateModel" placeholder="enter updated model" />
+                                            <input type="text" id="updateDoors" placeholder="enter updated door number" />
+                                            <input type="text" id="updateCarID" placeholder="enter car ID to update" />
+                                            <button type="button" id="updateCarButton">Update Car</button><br/><br/>
+                                          </div>
+                                        </div>
+                                      </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
      
       
     </div>
@@ -121,7 +167,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./cars.js"></script>
-
+    <script type="module" src="./login.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 
 </body>
 </html>
